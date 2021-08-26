@@ -6,15 +6,22 @@
 </head>
 	
 <style>
-	
-	
-	
+	body {background-color: #D8F4D0;
+		font-family: Helvetica, Arial, "sans-serif";
+		padding-left: 5%;
+		padding-top: 5%;}	
 </style>
 
 <body>
 	
+	<div>
+		<a href="index.html">Home</a>
+	</div>
+	
 	<form name="calculator">
 		<div id="myCalculator">
+			
+	
 			
 			<div id="top_display">
 				<input type="text" name="display" id="display" disabled>
@@ -43,7 +50,7 @@
 			
 		<div class="inputRow">
 				<input type="button" class="number" value="zero" onclick="calculator.display.value +='0'">
-				<input type="button" class="operator" name="equals" value="equals" onclick="calculator.display.value +=eval(calculator.display.value)">
+				<input type="button" class="operator" name="equals" value="equals" onclick="calculator.display.value =eval(calculator.display.value)">
 				<input type="button" class="operator" name="divide" value="÷" onclick="calculator.display.value +='/'">
 			</div>
 			
