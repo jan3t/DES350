@@ -3,35 +3,123 @@
 <head>
 <meta charset="utf-8">
 <title>calculator</title>
-</head>
 	
 <style>
-	body {background-color: #D8F4D0;
+	
+/*	BODY STYLE*/
+	
+	html {
+		height: 100%;
+	}
+	
+	body {
+		height: 100%;
+		background: linear-gradient(30deg, rgba(235,95,94,1) 0%, rgba(243,165,51,1) 57%, rgba(200,247,253,1) 100%);
 		font-family: Helvetica, Arial, "sans-serif";
-		padding-left: 5%;
-		padding-top: 5%;}	
-</style>
+		margin-top: 100px;
+		overflow: hidden;
+	}
+	
+	#display{
+		float: left;
+		width: 50%;
+		margin-top: 100px;
+		margin-left: 100px;
+		background-color: transparent;
+		border: none;
+		font-size: 100px;
+		font-family: 'Quicksand', sans-serif;
+		letter-spacing: 10px;
+		color: #C8F7FD;
+	}
 
+	
+/*CENTERING BASED ON WIDTH OF CALCULATOR*/
+	
+	#myCalculator{
+		width: 300px;
+		margin-left: calc(50% + 200px);
+		padding: 50px;
+		background-color: #EB5F5E;
+		border-radius: 50px;
+	}
+	
+/*	BEGINNING OF CLASSES*/
+	
+	.inputRow {
+  		width: 100%;
+  		display: flex;
+  		flex-wrap: nowrap;
+	}
+
+	.number{
+		width: 50px;
+		height: 50px;
+		margin: 15px;
+		background-color: transparent;
+		border-radius: 10px;
+		border: none;
+		font-size: 32px;
+		font-family: 'Quicksand', sans-serif;
+		font-weight: 700;
+		color: #C8F7FD; 
+	}
+	
+
+	.number:hover{
+		color: #384160;
+	}
+	
+	.operator{
+		width: 50px;
+		height: 50px;
+		margin: 5px;
+		background-color: #F3A533;
+		color: #C8F7FD;
+		border-radius: 10px;
+		border: none;
+		box-shadow: 0px 5px #C8F7FD;
+	
+	}
+	
+	#equal{
+		width: 140px;
+		height: 50px;
+		background-color: #F3A533;
+		color: #C8F7FD;
+		border-radius: 10px;
+		border: none;
+		box-shadow: 0px 5px #C8F7FD;
+	}
+	
+	.operator:hover{
+		background-color: #E3B881;
+	}
+	
+</style>
+</head>
+	
 <body>
 	
-	<div>
-		<a href="https://jan3t.github.io/DES350/index">Home</a>
-	</div>
+<!--	START OF CALCULATOR HTML-->
 	
 	<form name="calculator">
-		<div id="myCalculator">
-			
-	
-			
-			<div id="top_display">
-				<input type="text" name="display" id="display" disabled>
+		<div>
+		<a href="index.html">Home</a>
+	</div>
+		
+		<div id="top_display">
+				<input dir="rtl" type="text" name="display" id="display" disabled>
 			</div>
+		
+		<div id="myCalculator">
+				
 			
 		<div class="inputRow">
 				<input type="button" class="number" value="1" onclick="calculator.display.value +='1'">
 				<input type="button" class="number" value="2" onclick="calculator.display.value +='2'">
 				<input type="button" class="number" value="3" onclick="calculator.display.value +='3'">
-				<input type="button" class="operator" name="add" value="+" onclick="calculator.display.value +='+'">
+				<input type="button" class="operator" name="add" value="+" onclick="calculator.display.value += '+'">
 			</div>
 		
 		<div class="inputRow">
@@ -49,15 +137,18 @@
 			</div>
 			
 		<div class="inputRow">
-				<input type="button" class="number" value="zero" onclick="calculator.display.value +='0'">
-				<input type="button" class="operator" name="equals" value="equals" onclick="calculator.display.value =eval(calculator.display.value)">
-				<input type="button" class="operator" name="divide" value="÷" onclick="calculator.display.value +='/'">
-			</div>
+				<input type="button" class="number" value="0" onclick="calculator.display.value +='0'">
+				<input type="button" class="operator" id="equal" name="equals" value="=" onclick="calculator.display.value =eval(calculator.display.value)">
+				<input type="button" class="operator" name="divide" value="÷" onclick="calculator.display.value += '/'">
+			</div>		
 			
 		<div class="inputRow">
 				<input type="button" class="operator" name="clear" value="C" onclick="calculator.display.value =''">
 				<input type="button" class="operator" name="dot" value="." onclick="calculator.display.value +=dot(calculator.display.value)">
 			</div>
+			
+		
+			
 			
 		</div>
 	</form>
