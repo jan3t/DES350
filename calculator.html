@@ -12,11 +12,39 @@
 		height: 100%;
 	}
 	
+	#home {
+		width: 50px;
+		height: 50px;
+		font-weight: 700;
+		font-size: 24px;
+		background-color: darkorange;
+		color: #C8F7FD;
+		border-radius: 10px;
+		border: none;
+		box-shadow: 2px 2px #A55034, 3px 3px #A55034, 4px 4px #A55034;
+		transition: all 0.2s ease-in-out;
+	}
+	
+	#home:hover {
+		box-shadow: 0px 0px;
+		transform: translateX(3px);
+		}
+		
+		a:link, a:visited {
+  		color: white;
+  		padding: 20px 40px 3px 20px;
+  		text-align: center;
+  		text-decoration: none;
+  		display: inline-block;
+		font-family: 'Quicksand', sans-serif;
+}
+	
 	body {
+		margin-left: 50px;
 		height: 100%;
 		background: #0B0045;
 		font-family: Helvetica, Arial, "sans-serif";
-		margin-top: 100px;
+		margin-top: 50px;
 		overflow: hidden;
 	}
 	
@@ -137,11 +165,9 @@
 	
 <!--	START OF CALCULATOR HTML-->
 	
-	<form name="calculator"><div>
+	<form name="calculator">
 		
-		<a href="index.html">Home</a></div>
-		
-		<div class="organic"></div>
+		<a id="home" href="index.html">Home</a>
 		
 		<div id="top_display">
 				<input dir="rtl" type="text" name="display" id="display" disabled>
