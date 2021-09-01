@@ -63,6 +63,7 @@
 		font-family: 'Quicksand', sans-serif;
 		font-weight: 700;
 		color: #EC00A1; 
+		transition: all 0.2s ease-in-out;
 	}
 
 	.number:hover{
@@ -99,7 +100,6 @@
 		border-radius: 10px;
 		border: none;
 		box-shadow: 2px 2px #A55034, 3px 3px #A55034, 4px 4px #A55034;
-		transition: all 0.2s ease-in-out;
 	}
 	
 	#equal:hover{
@@ -120,12 +120,15 @@
 	#dot{
 		background-color: #4DC274;
 		box-shadow: 2px 2px #008140, 3px 3px #008140, 4px 4px #008140;
+		color: white;
 	}
 
 	#dot:hover{
 		box-shadow: 0px 0px;
 		transform: translateX(3px);
 	}
+	
+	
 	
 </style>
 </head>
@@ -171,7 +174,7 @@
 			
 		<div class="inputRow">
 				<input type="button" class="operator" id="clear" name="clear" value="C" onclick="calculator.display.value =''">
-				<input type="button" class="operator" id="dot" name="dot" value="." onclick="calculator.display.value +=dot(calculator.display.value)">
+				<input type="button" class="number" id="dot" value="." onclick="calculator.display.value +='.'">
 				<input type="button" class="number" value="0" onclick="calculator.display.value +='0'">
 				<input type="button" class="operator" name="divide" value="÷" onclick="calculator.display.value += '/'">
 			</div>		
