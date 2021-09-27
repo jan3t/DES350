@@ -10,9 +10,11 @@
 	
 	html {
 		height: 100%;
+		overflow: scroll;
 	}
 	
-	#home {
+	#index {
+		position: absolute;
 		width: 50px;
 		height: 50px;
 		font-weight: 700;
@@ -23,9 +25,10 @@
 		border: none;
 		box-shadow: 2px 2px #A55034, 3px 3px #A55034, 4px 4px #A55034;
 		transition: all 0.2s ease-in-out;
+		z-index: 1;
 	}
 	
-	#home:hover {
+	#index:hover {
 		box-shadow: 0px 0px;
 		transform: translateX(3px);
 		}
@@ -58,8 +61,8 @@
 		background-color: transparent;
 		border: none;
 		font-size: 150px;
-		font-style: "Bahnschrift";
-		letter-spacing: 10px;
+		font-family: "Bahnschrift";
+		letter-spacing: 5px;
 		color: white;
 	}
 
@@ -88,6 +91,15 @@
 		
 	}
 
+	.column{
+		position: absolute;
+		float: right;
+		width: 50px;
+		height: 200px;
+		background-color: white;
+		
+	}
+	
 	.number{
 		width: 50px;
 		height: 50px;
@@ -135,9 +147,12 @@
 	}
 	
 	#addition{
+		position: relative;
+		float: right;
 		margin-left: 200px;
 		color: #00958E;
 		transition: all 0.2s ease-in-out;
+		z-index: 1;
 	}
 	
 	#addition:hover{
@@ -175,6 +190,7 @@
 	}
 	
 	#equals{
+		position: absolute;
 		width: 100px;
 		height: 200px;
 		font-size: 150px;
@@ -182,7 +198,7 @@
 		color: #E8A21E;
 		font-style: "Bahnschrift";
 		margin-top: 550px;
-		margin-left: 50px;
+		margin-left: 10px;
 		transition: all 0.2s ease-in-out;
 	}
 	
@@ -222,7 +238,10 @@
 	
 	<form name="calculator">
 		
-		<a id="home" href="index.html">Home</a>
+	<div id="home">	
+		<img id="index" src="SVG/noun_Home_4258078.svg" width="730" height="803" alt=""/>
+		<a href="index.html"></a>
+		</div>
 		
 		<div id="top_display">
 				<input type="text" name="display" id="display" disabled>
