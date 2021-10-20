@@ -2,26 +2,26 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Principles</title>
+<title>test</title>
 </head>
+
 <style>
-	
+
 	body{
 		background-color: #3B4546;
 	}
-	/*Title Design*/
+	/*~~~~~TITLE DESIGN~~~~~*/
 	
-	#title{
-		margin-left: calc(50% - 800px);
-		padding
+	.title{
+		float: right;
+		position: relative;
+		margin-top: 50px;
+		margin-right: 250px;
 	}
 	
 	h1{
-		float: left;
-		display: inline-block;
-		margin-top: 0;
+		margin-top: 10px;
 		position: absolute;
-		display: inline-block;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 100;
 		font-size: 150px;
@@ -29,12 +29,23 @@
 	}
 	
 	h2{
-		float: right;
-		margin-top: 200px;
-		margin-right: 240px;
+		padding-top: 25px;
+		margin-left: 575px;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 700;
 		font-size: 150px;
+		line-height: 150px;
+		color: #D6EDED;
+	}
+	
+	h3{
+		float: right;
+		position: relative;
+		padding-left: 25px;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 700;
+		font-size: 150px;
+		line-height: 150px;
 		color: #D6EDED;
 	}
 	
@@ -42,157 +53,149 @@
 		color: #F6474E;
 	}
 	
-	#ofGood,#Design{
-		padding-left: 190px;
+	.principles{
+		float: left;
+		display: inline-flex;
+		margin-top: 50px;
+	}
+
+	
+	.Pr1{
+		position: absolute;
+		margin-top: 975px;
+		margin-left: 100px;
+		width: 800px;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 300;
+		font-size: 36px;
+		color: #D6EDED;		
 	}
 	
+	.Pr1 h4{
+		font-size: 60px;
+		padding-bottom: 20px;
+		border-bottom: 10px solid #00A4A2;
+	}
+	
+	.Pr2{
+		float: right;
+		position: relative;
+		margin-top: 1400px;
+		margin-left: 100px;
+		width: 800px;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 300;
+		font-size: 36px;
+		color: #D6EDED;	
+	}
+
+	.Pr2 h4{
+		font-size: 60px;
+		padding-bottom: 20px;
+		border-bottom: 10px solid #00A4A2;
+	}
+	
+	/*~~~~~BACKGROUND DESIGN~~~~~*/
+
+
 	#firstTriangle {
+		float: right;
 		position: absolute;
-		margin-top: 140px;
-		margin-left: 650px;
-		transform: scale(7);
+		margin-top: 100px;
+		margin-left: 475px;
+		transform: scale(6);
       	border-top: 100px solid #00A4A2;
       	border-left: 100px solid transparent;
 		z-index: -1;
 	}
-	
-	.list1{
+
+	#secondTriangle{
 		float: right;
-		display: inline-block;
-		margin-top: 10px;
-		margin-right: 350px;
+		position: absolute;
+		margin-top: 1275px;
+		margin-left: 1235px;
+		transform: scale(6);
+   	 	border-top: 100px solid #F6474E;
+   	 	border-right: 100px solid transparent;
+		z-index: -1;
 	}
 	
 	#one{
 		position: absolute;
-		margin-left: 1200px;
+		display: flow-root;
+		margin-top: 1020px;
+		margin-left: 1025px;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 700;
 		font-size: 150px;
 		color: #D6EDED;
 	}
 	
-	#secondTriangle{
+	#thirdTriangle {
 		float: right;
-		margin-top: 300px;
-		margin-left: 650px;
-		transform: scale(7);
-   	 	border-top: 100px solid #F6474E;
-   	 	border-right: 100px solid transparent;
-		z-index: -1;
-	}
-	
-	.principle1{
-		margin-top: 820px;
-		float: left;
 		position: absolute;
-		margin-left: 100px;
-		width: 800px;
-	}
-
-	h4{
-		font-family: 'Source Sans Pro', sans-serif;
-		font-weight: 700;
-		font-size: 60px;
-		color: #D6EDED;
-		padding-bottom: 30px;
-		border-bottom: 20px solid #00A4A2;
-	}
-	
-	p1{
-		font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
-		font-weight: lighter;
-		font-size: 48px;
-		line-height: 70px;
-		color: #D6EDED;
-	}
-	
-	#thirdTriangle{
-		float: right;
-		margin-top: 600px;
-		margin-left: 700px;
-		transform: scale(7);
-   	 	border-top: 100px solid #00A4A2;
+		margin-top: 1875px;
+		margin-left: 1235px;
+		transform: scale(6);
+      	border-top: 100px solid #00A4A2;
       	border-left: 100px solid transparent;
 		z-index: -1;
 	}
 	
-	#fourthTriangle{
-		float: left;
-		margin-top: 700px;
-		margin-left: 400px;
-		transform: scale(7);
+	#fourthTriangle {
+		float: right;
+		position: absolute;
+		margin-top: 2550px;
+		margin-left: 100px;
+		transform: scale(6);
       	border-top: 100px solid #F6474E;
       	border-left: 100px solid transparent;
 		z-index: -1;
 	}
 	
 	#two{
-		display: inline-block;
 		position: absolute;
-		margin-top: 2420px;
-		margin-left: 675px;
+		display: flow-root;
+		margin-top: 2300px;
+		margin-left: 325px;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 700;
 		font-size: 150px;
 		color: #D6EDED;
 	}
 	
-	.principle2{
-		float: right;
-		margin-top: 2260px;
-		position: absolute;
-		margin-left: 1030px;
-		width: 800px;
-	}
-	
-		h6{
-		font-family: 'Source Sans Pro', sans-serif;
-		font-weight: 700;
-		font-size: 60px;
-		color: #D6EDED;
-		padding-bottom: 30px;
-		border-bottom: 20px solid #00A4A2;
-	}
-	
-	p2{
-		font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
-		font-weight: lighter;
-		font-size: 48px;
-		line-height: 70px;
-		color: #D6EDED;
-	}
-	
 </style>
-<body>
 	
-	<div id="title">
-	<h1>Dieter Rams'</h1>
+<body>
+	 
+	<div class="title">
+	<h1>Dieter Rams’</h1>
 	
 	<div class="principles">
-		<h2><div id="firstTriangle"></div><span id="ten_title">10</span> Principles <br>
-											<span id="ofGood">of Good</span> <br>
-											<span id="Design">Design</span></h2>
-	</div>
+		<h2><span id="ten_title">10</span></h2>
+		<h3><div id="firstTriangle"></div>Principles <br>
+			of Good <br>
+			Design</h3>
+		</div>
+		<div id="secondTriangle"></div><span id="one">1</span>
+		<div id="thirdTriangle"></div>
+		<div id="fourthTriangle"></div><span id="two">2</span>
 	</div>
 	
-	<div class="list1">
-		<h3><div id="secondTriangle"></div><div id="thirdTriangle"></div><span id="one">1</span></h3>
-	</div>
 	
-	<div class="principle1">
-		<h4>A good design 
-is aesthetic.</h4>
+	<div class="Pr1">
+		<h4>A good design is aesthetic.</h4>
 		<p1>Aesthetics in design psychologically contributes to the well-being of people’s everyday lives. It is not only based on beauty, but how one can manipulate the appearance to reflect on the design’s purpose overall.</p1>
 	</div>
+		
 	
-	<h5><div id="fourthTriangle"></div><span id="two">2</span></h5>
-	
-	<div class="principle2">
-		<h6>A good design 
-is unique.</h6>
-		<p2>A good design typically stands out among other designs due to having an uncommon feature. Establishing a style that is uncommonly used or seen can be successful if the discipline of design is still applicable. </p2>
+	<div class="Pr2">
+		<h4>A good design is unique.</h4>
+		<p1>A good design typically stands out among other designs due to having an uncommon feature. Establishing a style that is uncommonly used or seen can be successful if the discipline of design is still applicable. </p1>
 	</div>
+	
+	
+	
 	
 </body>
 </html>
