@@ -62,7 +62,7 @@
 	
 	.Pr1{
 		position: absolute;
-		margin-top: 975px;
+		margin-top: 1200px;
 		margin-left: 100px;
 		width: 800px;
 		font-family: 'Source Sans Pro', sans-serif;
@@ -80,8 +80,8 @@
 	.Pr2{
 		float: right;
 		position: relative;
-		margin-top: 1400px;
-		margin-left: 100px;
+		margin-top: 1550px;
+		margin-right: 100px;
 		width: 800px;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
@@ -112,7 +112,7 @@
 	#secondTriangle{
 		float: right;
 		position: absolute;
-		margin-top: 1275px;
+		margin-top: 1350px;
 		margin-left: 1235px;
 		transform: scale(6);
    	 	border-top: 100px solid #F6474E;
@@ -123,7 +123,7 @@
 	#one{
 		position: absolute;
 		display: flow-root;
-		margin-top: 1020px;
+		margin-top: 1100px;
 		margin-left: 1025px;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 700;
@@ -134,7 +134,7 @@
 	#thirdTriangle {
 		float: right;
 		position: absolute;
-		margin-top: 1875px;
+		margin-top: 1950px;
 		margin-left: 1235px;
 		transform: scale(6);
       	border-top: 100px solid #00A4A2;
@@ -164,6 +164,58 @@
 		color: #D6EDED;
 	}
 	
+	#fifthTriangle {
+		float: right;
+		position: absolute;
+		margin-top: 3150px;
+		margin-left: 100px;
+		transform: scale(6);
+      	border-top: 100px solid #00A4A2;
+   	 	border-right: 100px solid transparent;
+		z-index: -1;
+	}
+	
+	#sixthTriangle {
+		float: right;
+		position: absolute;
+		margin-top: 3750px;
+		margin-left: 1235px;
+		transform: scale(6);
+      	border-top: 100px solid #F6474E;
+   	 	border-right: 100px solid transparent;
+		z-index: -1;
+	}
+
+	#three{
+		position: absolute;
+		display: flow-root;
+		margin-top: 3500px;
+		margin-left: 1025px;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 700;
+		font-size: 150px;
+		color: #D6EDED;
+	}
+	
+	
+	@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
+.title h1 {
+   opacity:0;  /* make things invisible upon start */
+   animation:fadeIn ease-in 1;
+   animation-fill-mode:forwards;
+   animation-duration:1.4s;
+  }
+
+.principles {
+	opacity:0;  /* make things invisible upon start */
+   animation:fadeIn ease-in 1;
+   animation-fill-mode:forwards;
+   animation-duration:1.4s;
+	animation-delay: 1.4s;
+	}
+
+	
 </style>
 	
 <body>
@@ -180,6 +232,8 @@
 		<div id="secondTriangle"></div><span id="one">1</span>
 		<div id="thirdTriangle"></div>
 		<div id="fourthTriangle"></div><span id="two">2</span>
+		<div id="fifthTriangle"></div>
+		<div id="sixthTriangle"></div><span id="three">3</span>
 	</div>
 	
 	
