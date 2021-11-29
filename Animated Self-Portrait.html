@@ -52,6 +52,9 @@ body{
 	margin-left: 190px;
 	box-shadow: -25px 10px 0px 0px #FFDBAC;
 	border-radius: 50%;
+	animation-name: part;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
  }	
 	
 .ponyTail{
@@ -151,6 +154,9 @@ body{
     height: 100px;
     background: #FFDBAC;
     border-radius: 50%;
+	animation-name: angry;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
 	}
 
 .pupil-R {
@@ -235,6 +241,9 @@ body{
     height: 100px;
     background: #FFDBAC;
     border-radius: 50%;
+	animation-name: angry;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
 	}
 	
 .pupil-L {
@@ -404,20 +413,22 @@ body{
 	
 @keyframes face {
 	45% {
-	transform: translateY(-30px);	
+	transform: translateY(-30px);
+	background-color: #FFAD9D;
 	}
 	
 	70% {
-	transform: translateY(0px);	
+	transform: translateY(0px);
 	}
 }
 	
 @keyframes ear {
 	45% {
-	transform: translateY(-15px);	
+	transform: translateY(-15px);
+	background-color: #FFAD9D;
 	}
 	
-	70% {
+	60% {
 	transform: translateY(0px);	
 	}
 }	
@@ -426,6 +437,26 @@ body{
     0%, 100%{ transform: rotate(-50deg);}
     45%{ transform: rotate(-55deg); }
 }	
+
+@keyframes angry {
+	45% {
+	background-color: #FFAD9D;
+	}
+	
+	60% {
+	transform: translateY(0px);
+	}
+}	
+	
+@keyframes part {
+	45% {
+	box-shadow: -25px 10px 0px 0px #FFAD9D;
+	}
+	
+	60% {
+	transform: translateY(0px);
+	}
+}
 	
 </style>
 <body>
