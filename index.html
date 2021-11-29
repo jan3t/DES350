@@ -11,9 +11,10 @@
 	}
 		
 		body {
-		margin-left: 50px;
+		margin-left: 300px;
 		height: 100%;
-		background-color: white;
+		width: 75%;
+		background: linear-gradient(90deg, #C7EEF5 50%, white 50%);
 		font-family: Helvetica, Arial, "sans-serif";
 		}
 
@@ -24,34 +25,42 @@
     
     h2{
       float: left;
-	  width: 50%;
-	  display: flex;
-	  padding-right: 60px;
+	  width: 100%;
       margin-left: 100px;
-      padding-bottom: 10px;
-      border-bottom: 5px solid #00A4A2;
+      line-height: 42px;
+		color: #02244A;
+      border-bottom: 5px solid #F07C41;
     }
 		
 	h3{
-		line-height: 70px;
-		float: left;
-		width: 50%;
-		margin-top: 363px;
-		margin-left: 50px;
+		position: absolute;
+		color: #02244A;
+		text-align: right;
+		line-height: 36px;
+		margin-top: 100px;
+		animation-name: slideOut;
+		animation-duration: 2s;
     }	
 		
 	#about{
+		color: #02244A;
+		display: inline-flex;
+		positon: relative;
+		text-align: right;
 		font-size: 24px;
 		line-height: 45px;
-		float: left;
 		border-bottom: 5px solid #00A4A2;
+		animation-name: slideOut;
+		animation-duration: 2s;
 		}
 		
     .projects{
+		display: inline-flex;
+		position: relative;
 		float: right;
-     	margin-top: 300px;
-		margin-right: 100px;
-	
+		width: 50%;
+		margin-top: 290px;
+		margin-right: 150px;
     }
     
 	#calculator {
@@ -74,15 +83,6 @@
 		transform: translateX(3px);
 		}
 		
-	a:link, a:visited {
-  		color: white;
-  		padding: 20px 90px 5px 20px;
-  		text-align: center;
-  		text-decoration: none;
-  		display: inline-block;
-		font-family: 'Quicksand', sans-serif;
-}
-		
 	#calculator_p2{
 		width: 50px;
 		height: 75px;
@@ -104,13 +104,15 @@
 		}
 		
 	a:link, a:visited {
-  		color: white;
-  		padding: 20px 90px 5px 20px;
+  		color: #02244A;
   		text-align: center;
   		text-decoration: none;
   		display: inline-block;
-		font-family: 'Quicksand', sans-serif;
 }
+
+		work:hover {
+			color: red;
+		}
 		
 	#principles{
 		width: 50px;
@@ -131,42 +133,6 @@
 		box-shadow: 0px 0px;
 		transform: translateX(3px);
 		}
-		
-	a:link, a:visited {
-  		color: white;
-  		padding: 20px 90px 5px 20px;
-  		text-align: center;
-  		text-decoration: none;
-  		display: inline-block;
-		font-family: 'Quicksand', sans-serif;
-		}
-		
-	#button{
-   		display: table;
-		margin-top: 50px;
-    	margin-left: 50px;
-		font-weight: 700;
-		font-size: 24px;
-		background-color: darkorange;
-		color: #C8F7FD;
-		border-radius: 50px;
-		border: none;
-		box-shadow: 2px 2px #A55034, 3px 3px #A55034, 4px 4px #A55034;
-		transition: all 0.2s ease-in-out;
-		}
-		
-	#button:hover {
-		box-shadow: 0px 0px;
-		transform: translateX(3px);
-		}
-		
-	a:link, a:visited {
-  		color: white;
-  		padding: 20px 90px 5px 20px;
-  		text-align: center;
-  		text-decoration: none;
-		font-family: 'Quicksand', sans-serif;
-    }
       
   	.container .name{
     	position: relative;
@@ -176,10 +142,10 @@
 	}
 
 	.container {
-    	text-align: center;
+    	text-align: right;
    		position: absolute;
    		top: 10%;
-    	left: 50%;
+    	right: 50%;
     	transform: translate(-50%);
 	}
 
@@ -187,19 +153,22 @@
 		position: relative;
     	font-size: 60px;
     	font-weight: 700;
-    	color: #000;
+    	color: #02244A;
     	letter-spacing: 8px;
     	margin-bottom: 20px;
-    	background: #fff;
+    	background: transparent;
     	position: relative;
-    	animation: text 3s 1;
 	}
 
 	.course {
     	font-size: 30px;
-    	color: #70a1ff;
+    	color: #00A4A2;
 	}
-
+		
+	#work:hover {
+			color: red;
+		}
+		
 @keyframes text {
 		
     0%{
@@ -231,6 +200,18 @@
     transform: none;
   }
 }
+		
+@keyframes slideOut {
+	0%,50% {
+	transform: translateX(10px);
+	opacity: 0;
+	}
+	
+	100% {
+	transform: translateX(0px);
+	opacity: 1;
+	}
+}
 
 h2 #work{
   opacity: 0; 
@@ -247,44 +228,42 @@ h2 #work {
 	
   <div class="container">
         <span class="name">Janet Ngo</span>
-        <span class="course">Digital Media III</span>
-  </div>
+        <span class="course">Digital Media Design III</span>
+
 
 
 		<h3><span id="about">About me:</span><br>
-I am a student at the University of Illionis at Chicago studying graphic design.</h3>
+<br>
+
+Hi, my name is Janet. <br>
+I am a junior at the University of Illinois at Chicago taking on the field of graphic design.</h3>
+	</div>
 	
 	<div class="projects">
     <div class="button">
 		
 	<div class="p6">
-      <h2><span id="work">National Park Poster</h2></span>
-	<a id="button" href="CSS_PosterCard.html">🠮</a>
+      <h2><a href="CSS_PosterCard.html"><span id="work">Poster Card</span></a></h2>
     </div>
 		
 	<div class="p5">
-      <h2><span id="work">Animated Portrait</h2></span>
-	<a id="button" href="Animated Self-Portrait.html">🠮</a>
+      <h2><a href="Animated Self-Portrait.html"><span id="work">Animated Portrait</span></a></h2>
     </div>
 		
     <div class="p4">
-      <h2><span id="work">Self-Portrait</h2></span>
-	<a id="button" href="Self-Portrait.html">🠮</a>
+     <h2><a href="Self-Portrait.html"><span id="work">Self-Portrait</span></a></h2>
     </div>
     
     <div class="p3">
-      <h2><span id="work">Dieter Rams' 10 Principles</span></h2>
-	<a id="button" href="Dieter Rams.html">🠮</a>
+      <h2><a href="Dieter Rams.html"><span id="work">10 Principles</span></a></h2>
     </div>  
     
     <div class="p2">
-      <h2><span id="work">Designer Calculator</span></h2>
-	<a id="button" href="calculator_v2.html">🠮</a>
+	<h2><a href="calculator_v2.html"><span id="work">Designer Calculator</span></a></h2>
     </div> 
     
     <div class="p1">
-      <h2><span id="work">Calculator</span></h2>
-	<a id="button" href="calculator.html">🠮</a>
+	<h2><a href="calculator.html"><span id="work">Calculator</span></a></h2>
     </div>
 		</div>
   </div>
