@@ -1,53 +1,21 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>calculator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untitled Document</title>
+<link href="../Calculator_CSS.css" rel="stylesheet" type="text/css">
+</head>
 	
 <style>
 	
-/*	BODY STYLE*/
-	
-	html {
-		height: 100%;
-	}
-	
-	#index {
-		position: absolute;
-		width: 50px;
-		height: 50px;
-		font-weight: 700;
-		font-size: 24px;
-		background-color: darkorange;
-		color: #C8F7FD;
-		border-radius: 10px;
-		border: none;
-		box-shadow: 2px 2px #A55034, 3px 3px #A55034, 4px 4px #A55034;
-		transition: all 0.2s ease-in-out;
-		z-index: 1;
-	}
-	
-	#index:hover {
-		box-shadow: 0px 0px;
-		transform: translateX(3px);
-		}
-		
-		a:link, a:visited {
-  		color: white;
-  		padding: 20px 40px 3px 20px;
-  		text-align: center;
-  		text-decoration: none;
-  		display: inline-block;
-		font-family: 'Quicksand', sans-serif;
-}
-	
 	body {
-		margin-left: 50px;
-		height: 100%;
 		background: #202123;
 		font-family: Helvetica, Arial, "sans-serif";
-		margin-top: 50px;
 		overflow: hidden;
+	}
+	
+	.myCalc{
 	}
 	
 	#display{
@@ -57,101 +25,82 @@
 		width: 100%;
 		margin-top: 300px;
 		margin-left: 50px;
+		
 		background-color: transparent;
 		border: none;
 		font-size: 150px;
 		font-family: "Bahnschrift";
-		letter-spacing: 5px;
+		letter-spacing: 3px;
 		color: white;
 	}
-
 	
-/*CENTERING BASED ON WIDTH OF CALCULATOR*/
-	
-	#myCalculator{
-		float: right;
-		width: 1000px;
-		height: 700px;
-		margin-right: calc(50% - 500px);
-		padding: 30px;
-	}
-	
-/*	BEGINNING OF CLASSES*/
-	
-	.inputRow {
+	.container{
 		float: left;
-		transform: scale(3);
-  		width: 100%;
-		margin-left: 1000px;
-  		display: flex;
-  		flex-wrap: nowrap;
-		margin-top: 70px;
-		padding-bottom: 50px;
-		
 	}
-
-	.column{
+	
+	.inputRow{
 		position: absolute;
-		float: right;
-		width: 50px;
-		height: 200px;
-		background-color: white;
+		display: flex;
+		flex-direction: row;
 		
-	}
+		width: auto;
+		height: auto;
+		margin-left: 250px;
+}	
 	
 	.number{
-		width: 50px;
-		height: 50px;
-		margin: 10px;
-		background-color: transparent;
-		border-radius: 10px;
-		border: none;
-		font-size: 32px;
-		font-family: 'Quicksand', sans-serif;
-		font-weight: 700;
-		color: #EC00A1; 
+		width: 125px;
+		padding-right: 50px;
 		transition: all 0.2s ease-in-out;
 	}
-
+	
 	.number:hover{
-		color: #C8F7FD;
 		transform: scale(.9);
 	}
 	
+	#r1{
+		top: 10%;
+		left: 5%;
+}
+	
+	#r2{
+		top: 30%;
+		left: 10%;
+	}
+	
+	#r3{
+		top: 50%;
+		left: 15%;
+	}
+	
+	#r4{
+		top: 70%;
+		left: 20%;
+	}
+	
+	.op_container{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		float: right;
+		margin-top: 70px;
+		margin-right: 50px;
+		
+	}
+
 	.operator{
-		width: 50px;
-		height: 50px;
-		margin: 10px;
+		padding-bottom: 60px;
 		font-style: "Bahnschrift";
 		font-weight: 700;
-		font-size: 36px;
+		font-size: 80px;
 		color: #C8F7FD;
 		background-color: transparent;
 		border: none;
 	}
 	
-	.operator:hover{
-	}
-	
-	#r2{
-		padding-left: 50px;
-	}
-	
-	#r3{
-		padding-left: 100px;
-	}
-	
-	#r4{
-		padding-left: 150px;
-	}
-	
 	#addition{
-		position: relative;
-		float: right;
-		margin-left: 200px;
 		color: #00958E;
 		transition: all 0.2s ease-in-out;
-		z-index: 1;
 	}
 	
 	#addition:hover{
@@ -159,7 +108,6 @@
 	}
 	
 	#subtraction{
-		margin-left: 165px;
 		color: #6F67AB;
 		transition: all 0.2s ease-in-out;
 	}
@@ -169,7 +117,6 @@
 	}
 	
 	#multiplication{
-		margin-left: 133px;
 		color: #FE6C31;
 		transition: all 0.2s ease-in-out;
 	}
@@ -179,7 +126,6 @@
 	}
 	
 	#division{
-		margin-left: 100px;
 		color: #F68D91;
 		transition: all 0.2s ease-in-out;
 	}
@@ -189,15 +135,9 @@
 	}
 	
 	#equals{
-		position: absolute;
-		width: 100px;
-		height: 200px;
-		font-size: 150px;
-		background-color: transparent;
-		color: #E8A21E;
-		font-style: "Bahnschrift";
 		margin-top: 550px;
-		margin-left: 10px;
+		margin-left: 50px;
+		color: #E8A21E;
 		transition: all 0.2s ease-in-out;
 	}
 	
@@ -205,80 +145,66 @@
 		transform: scale(1.1);
 	}
 	
-	#clear{
-		background-color: transparent;
-		transition: all 0.2s ease-in-out;
-	}
-	
-	#clear:hover{
-		background-color: transparent;
-		transform: scale(.9);
-	}
-	
 	#dot{
 		color: white;
 		font-style: "Bahnschrift";
 		font-size: 32px;
 		transition: all 0.2s ease-in-out;
+		transform: scale(.20);
+		border-radius: 100px;
 	}
-
+	
 	#dot:hover{
-		transform: scale(.9);
+		transform: scale(.17);
 	}
-	
-	
 	
 </style>
-</head>
-	
+
 <body>
 	
-<!--	START OF CALCULATOR HTML-->
-	
 	<form name="calculator">
-
+	<div class="myCalc">
 		
 		<div id="top_display">
-				<input type="text" name="display" id="display" disabled>
-			</div>
-		
-		<div id="myCalculator">
-				
-			
-		<div class="inputRow" id="r1">
-				<img src="./newfolder/Pie 1.svg" type="button" class="number" value="" onclick="calculator.display.value +='1'">
-				<img src="./newfolder/Pie 2.svg" type="button" class="number" value="2" onclick="calculator.display.value +='2'">
-				<img src="./newfolder/Pie 3.svg" type="button" class="number" value="3" onclick="calculator.display.value +='3'">
-				<input type="button" class="operator" id="addition" name="add" value="+" onclick="calculator.display.value += '+'">
-			</div>
-		
-		<div class="inputRow" id="r2">
-				<img src="./newfolder/Pie 4.svg" type="button" class="number" value="4" onclick="calculator.display.value +='4'">
-				<img src="./newfolder/Pie 5.svg" type="button" class="number" value="5" onclick="calculator.display.value +='5'">
-				<img src="./newfolder/Pie 6.svg" type="button" class="number" value="6" onclick="calculator.display.value +='6'">
-				<input type="button" class="operator" id="subtraction" name="subtract" value="-" onclick="calculator.display.value +='-'">
-			</div>
-			
-		<div class="inputRow" id="r3">
-				<img src="./newfolder/Pie 7.svg" type="button" class="number" value="7" onclick="calculator.display.value +='7'">
-				<img src="./newfolder/Pie 8.svg" type="button" class="number" value="8" onclick="calculator.display.value +='8'">
-				<img src="./newfolder/Pie 9.svg" type="button" class="number" value="9" onclick="calculator.display.value +='9'">
-				<input type="button" class="operator" id="multiplication" name="multiply" value="×" onclick="calculator.display.value +='*'">
-			</div>
-			
-		<div class="inputRow" id="r4">
-				<img src="./newfolder/Clear.svg" type="button" class="operator" id="clear" name="clear" value="C" onclick="calculator.display.value =''">
-				<img src="./newfolder/Pie 0.svg" type="button" class="number" value="0" onclick="calculator.display.value +='0'">
-				<input type="button" class="number" id="dot" value="." onclick="calculator.display.value +='.'">
-				<input type="button" class="operator" id="division" name="divide" value="÷" onclick="calculator.display.value += '/'">
-			</div>		
+			<input type="text" name="display" id="display" disabled>
 		</div>
-				<input type="button" class="operator" id="equals" name="equals" value="=" onclick="calculator.display.value =eval(calculator.display.value)">
-			
 		
+	<div class="container">
+	
+<div class="inputRow" id="r1">
+	<img src="./newfolder/Pie 1.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='1'">
+	<img src="./newfolder/Pie 2.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='2'">
+	<img src="./newfolder/Pie 3.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='3'">
+</div>
+	
+<div class="inputRow" id="r2">
+	<img src="./newfolder/Pie 4.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='4'">
+	<img src="./newfolder/Pie 5.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='5'">
+	<img src="./newfolder/Pie 6.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='6'">
+</div>
+	
+<div class="inputRow" id="r3">
+	<img src="./newfolder/Pie 7.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='7'">
+	<img src="./newfolder/Pie 8.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='8'">
+	<img src="./newfolder/Pie 9.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='9'">
+</div>
+	
+<div class="inputRow" id="r4">
+	<img src="./newfolder/Clear.svg" type="button" class="number" id="clear" alt="" name="clear" value="C" onclick="calculator.display.value =''">
+	<img src="./newfolder/Pie 0.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='0'">
+	<input type="button" class="number" id="dot" value="" onclick="calculator.display.value +='.'">
+</div>	
+		</div>
+
+<div class="op_container">
+<input type="button" class="operator" id="addition" name="add" value="+" onclick="calculator.display.value += '+'">
+<input type="button" class="operator" id="subtraction" name="subtract" value="-" onclick="calculator.display.value += '-'">
+<input type="button" class="operator" id="multiplication" name="multiply" value="×" onclick="calculator.display.value += '*'">
+<input type="button" class="operator" id="division" name="divide" value="÷" onclick="calculator.display.value += '/'">
+</div>
+		
+<input type="button" class="operator" id="equals" name="equals" value="=" onclick="calculator.display.value =eval(calculator.display.value)">		
+		</div>
 	</form>
-	
-	
-	
 </body>
 </html>
