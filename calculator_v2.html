@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>calculator</title>
+<link href="../Calculator_CSS.css" rel="stylesheet" type="text/css">
 </head>
 	
 <style>
 	
 	body {
 		background: #202123;
-		font-family: Helvetica, Arial, "sans-serif";
 		overflow: hidden;
 	}
 	
 	.myCalc{
-		margin-left: 50px;
+		margin-left: 200px;
 	}
 	
 	#display{
@@ -23,7 +23,7 @@
 		position: absolute;
 		float: left;
 		width: 100%;
-		margin-top: 300px;
+		margin-top: 50vh;
 		margin-left: 50px;
 		
 		background-color: transparent;
@@ -35,7 +35,6 @@
 	}
 	
 	.container{
-		float: left;
 	}
 	
 	.inputRow{
@@ -45,7 +44,7 @@
 		
 		width: auto;
 		height: auto;
-		margin-left: 250px;
+		padding-left: 50vh;
 }	
 	
 	.number{
@@ -80,31 +79,29 @@
 	
 	.op_container{
 		position: relative;
-		display: flex;
-		flex-direction: column;
+		margin-top: 50px;
+		margin-right: 300px;
 		float: right;
-		margin-top: 70px;
-		margin-right: 50px;
-		
 	}
 
 	.operator{
-		padding-bottom: 60px;
+		height: 20vh;
+		display: flex;
 		font-style: "Bahnschrift";
 		font-weight: 700;
 		font-size: 80px;
-		color: #C8F7FD;
 		background-color: transparent;
 		border: none;
 	}
 	
 	#addition{
+		top: 50%;
 		color: #00958E;
 		transition: all 0.2s ease-in-out;
 	}
 	
 	#addition:hover{
-		transform: scale(1.1);
+		transform: scale(1.5);
 	}
 	
 	#subtraction{
@@ -113,7 +110,7 @@
 	}
 	
 	#subtraction:hover{
-		transform: scale(1.1);
+		transform: scale(1.5);
 	}
 	
 	#multiplication{
@@ -122,7 +119,7 @@
 	}
 	
 	#multiplication:hover{
-		transform: scale(1.1);
+		transform: scale(1.5);
 	}
 	
 	#division{
@@ -131,18 +128,22 @@
 	}
 	
 	#division:hover{
-		transform: scale(1.1);
+		transform: scale(1.5);
 	}
 	
 	#equals{
-		margin-top: 550px;
+		position: absolute;
+		display: flex;
+		width: auto;
+		top: 70%;
 		margin-left: 50px;
+		padding-bottom: 0;
 		color: #E8A21E;
 		transition: all 0.2s ease-in-out;
 	}
 	
 	#equals:hover{
-		transform: scale(1.1);
+		transform: scale(1.5);
 	}
 	
 	#dot{
@@ -167,31 +168,32 @@
 		
 		<div id="top_display">
 			<input type="text" name="display" id="display" disabled>
+			<input type="button" class="operator" id="equals" name="equals" value="=" onclick="calculator.display.value =eval(calculator.display.value)">
 		</div>
 		
 	<div class="container">
 	
 <div class="inputRow" id="r1">
-	<img src="./newfolder/Pie 1.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='1'">
-	<img src="./newfolder/Pie 2.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='2'">
-	<img src="./newfolder/Pie 3.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='3'">
+	<img src="SVG/Pie 1.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='1'">
+	<img src="SVG/Pie 2.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='2'">
+	<img src="SVG/Pie 3.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='3'">
 </div>
 	
 <div class="inputRow" id="r2">
-	<img src="./newfolder/Pie 4.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='4'">
-	<img src="./newfolder/Pie 5.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='5'">
-	<img src="./newfolder/Pie 6.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='6'">
+	<img src="SVG/Pie 4.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='4'">
+	<img src="SVG/Pie 5.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='5'">
+	<img src="SVG/Pie 6.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='6'">
 </div>
 	
 <div class="inputRow" id="r3">
-	<img src="./newfolder/Pie 7.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='7'">
-	<img src="./newfolder/Pie 8.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='8'">
-	<img src="./newfolder/Pie 9.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='9'">
+	<img src="SVG/Pie 7.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='7'">
+	<img src="SVG/Pie 8.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='8'">
+	<img src="SVG/Pie 9.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='9'">
 </div>
 	
 <div class="inputRow" id="r4">
-	<img src="./newfolder/Clear.svg" type="button" class="number" id="clear" alt="" name="clear" value="C" onclick="calculator.display.value =''">
-	<img src="./newfolder/Pie 0.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='0'">
+	<img src="SVG/Clear.svg" type="button" class="number" id="clear" alt="" name="clear" value="C" onclick="calculator.display.value =''">
+	<img src="SVG/Pie 0.svg" type="button" class="number" value="" alt="" onclick="calculator.display.value +='0'">
 	<input type="button" class="number" id="dot" value="" onclick="calculator.display.value +='.'">
 </div>	
 		</div>
@@ -201,10 +203,11 @@
 <input type="button" class="operator" id="subtraction" name="subtract" value="-" onclick="calculator.display.value += '-'">
 <input type="button" class="operator" id="multiplication" name="multiply" value="×" onclick="calculator.display.value += '*'">
 <input type="button" class="operator" id="division" name="divide" value="÷" onclick="calculator.display.value += '/'">
+	
+		</div>
 </div>
 		
-<input type="button" class="operator" id="equals" name="equals" value="=" onclick="calculator.display.value =eval(calculator.display.value)">		
-		</div>
+
 	</form>
 </body>
 </html>
